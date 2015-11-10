@@ -5,9 +5,9 @@
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="text_login">Sudah punya akun? Login</string>
-    <string name="section_home">Home</string>
+    <string name="section_home">Featured</string>
     <string name="section_trip">Trip</string>
-    <string name="section_sell">Sell</string>
+    <string name="section_sell">Be a Seller</string>
     <string name="section_search">Search</string>
     <string name="text_register">Belum punya akun? Register</string>
 </resources>

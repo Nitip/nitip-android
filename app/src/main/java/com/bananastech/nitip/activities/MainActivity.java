@@ -10,7 +10,9 @@ import com.bananastech.nitip.fragments.SellFragment;
 import com.bananastech.nitip.fragments.TripFragment;
 import com.blunderer.materialdesignlibrary.activities.ViewPagerWithTabsActivity;
 import com.blunderer.materialdesignlibrary.handlers.ActionBarHandler;
+import com.blunderer.materialdesignlibrary.handlers.ActionBarSearchHandler;
 import com.blunderer.materialdesignlibrary.handlers.ViewPagerHandler;
+import com.blunderer.materialdesignlibrary.listeners.OnSearchListener;
 
 public class MainActivity extends ViewPagerWithTabsActivity {
 
@@ -31,7 +33,12 @@ public class MainActivity extends ViewPagerWithTabsActivity {
 
     @Override
     protected ActionBarHandler getActionBarHandler() {
-        return null;
+        return new ActionBarSearchHandler(this, new OnSearchListener() {
+            @Override
+            public void onSearched(String text) {
+
+            }
+        });
     }
 
     @Override
