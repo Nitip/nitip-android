@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bananastech.nitip.R;
-import com.bananastech.nitip.models.ItemModel;
 import com.bananastech.nitip.models.TripModel;
 import com.skocken.efficientadapter.lib.viewholder.EfficientViewHolder;
 
@@ -19,8 +18,9 @@ public class TripViewHolder extends EfficientViewHolder<TripModel> {
     }
 
     @Override
-    protected void updateView(Context context, TripModel trip) {
+    protected void updateView(final Context context, TripModel trip) {
         TextView tvName = findViewByIdEfficient(R.id.row_seller_main_tv_destination);
         tvName.setText(trip.destination);
     }
+
 }

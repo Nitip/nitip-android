@@ -32,30 +32,52 @@ public class SellerCreateTripActivity extends AppCompatActivity {
     @Bind(R.id.activity_seller_create_trip_et_destination)
     EditText et_destination;
 
-    @OnFocusChange(R.id.activity_seller_create_trip_et_destination)
-    public void onFocusChange(boolean hasFocus) {
+    @Bind(R.id.activity_seller_create_trip_et_from_date)
+    EditText et_from_date;
+
+    @Bind(R.id.activity_seller_create_trip_et_to_date)
+    EditText et_to_date;
+
+    @OnFocusChange(R.id.activity_seller_create_trip_et_from_date)
+    public void onFromFocusChange(boolean hasFocus) {
         DialogFragment dialogFragment =
-                new DatePickerFragment() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                        super.onDateSet(view, year, monthOfYear, dayOfMonth);
-                        et_destination.setText(String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear) + "-" + String.valueOf(year));
-                    }
-                };
+            new DatePickerFragment() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                    super.onDateSet(view, year, monthOfYear, dayOfMonth);
+                    et_from_date.setText(String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear) + "-" + String.valueOf(year));
+                }
+            };
+        dialogFragment.show(getSupportFragmentManager(), "datepicker");
+    }
+
+    @OnFocusChange(R.id.activity_seller_create_trip_et_to_date)
+    public void onToFocusChange(boolean hasFocus) {
+        DialogFragment dialogFragment =
+            new DatePickerFragment() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                    super.onDateSet(view, year, monthOfYear, dayOfMonth);
+                    et_to_date.setText(String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear) + "-" + String.valueOf(year));
+                }
+            };
         dialogFragment.show(getSupportFragmentManager(), "datepicker");
     }
 
     @OnClick(R.id.activity_seller_create_trip_btn_submit)
     public void submitTrip() {
         //submit
+        /*
         long contohdate = 0;
         TripModel trip=new TripModel(et_destination.getText().toString(), et_origin.getText().toString(),contohdate,contohdate);
         Gson gson = new Gson();
         String json = gson.toJson(trip);
         AsyncHttpClient client = new AsyncHttpClient();
+        */
 
         //client.post("http://example.com")
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
