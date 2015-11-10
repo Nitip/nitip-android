@@ -12,6 +12,8 @@
         </activity>
         <activity android:name=".activities.buyer.BuyerMainActivity" >
         </activity>
+        <activity android:name=".activities.buyer.BuyerDetailItemActivity" >
+        </activity>
         <activity android:name=".activities.buyer.BuyerListTripActivity" >
         </activity>
         <activity android:name=".activities.buyer.BuyerRequestItemActivity" >
