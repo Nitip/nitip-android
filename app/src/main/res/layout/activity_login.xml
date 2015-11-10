@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/activity_login_iv_logo"
-        android:src="@drawable/ic_launcher"
-        android:layout_width="wrap_content"
-        android:layout_height="72dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp" />
 
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/textColorSecondary"
+            android:textColor="@color/textColorPrimary"
             android:textColorHint="@color/textColorHint" />
     </android.support.design.widget.TextInputLayout>
 
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
-            android:textColor="@color/textColorSecondary" />
+            android:textColor="@color/textColorPrimary" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
@@ -54,7 +54,7 @@
         android:padding="12dp"
         android:text="@string/button_login"
         android:background="@color/colorPrimary"
-        android:textColor="@color/textColorSecondary" />
+        android:textColor="@color/textColorPrimary" />
 
     <TextView
         android:id="@+id/activity_login_tv_register"
@@ -63,7 +63,7 @@
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:text="@string/text_register"
-        android:textColor="@color/textColorSecondary"
+        android:textColor="@color/textColorPrimary"
         android:textSize="16dip" />
 
 </LinearLayout>

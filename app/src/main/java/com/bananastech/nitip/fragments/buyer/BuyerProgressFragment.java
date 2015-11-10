@@ -38,7 +38,7 @@ public class BuyerProgressFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_progress_buyer, container, false);
         ButterKnife.bind(this, view);
         List<ItemModel> itemModelList = new ArrayList<ItemModel>();
-        itemModelList.add(new ItemModel("test", 2000));
+        itemModelList.add(new ItemModel("test", 2000, "Paris"));
         EfficientRecyclerAdapter<ItemModel> adapter = new EfficientRecyclerAdapter<ItemModel>(R.layout.row_featured_item, ItemViewHolder.class, itemModelList);
         recyclerViewItems.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewItems.setAdapter(adapter);

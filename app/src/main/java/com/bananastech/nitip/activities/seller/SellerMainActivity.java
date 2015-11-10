@@ -38,7 +38,7 @@ public class SellerMainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         List<TripModel> tripModelList = new ArrayList<TripModel>();
         tripModelList.add(new TripModel("Jakarta", "Johannesburg", 0, 0));
-        EfficientRecyclerAdapter<TripModel> adapter = new EfficientRecyclerAdapter<TripModel>(R.layout.row_seller_main, TripViewHolder.class, tripModelList);
+        EfficientRecyclerAdapter<TripModel> adapter = new EfficientRecyclerAdapter<TripModel>(R.layout.row_trip, TripViewHolder.class, tripModelList);
         recyclerViewTrips.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewTrips.setAdapter(adapter);
         setSupportActionBar(toolbar);

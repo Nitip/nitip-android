@@ -32,14 +32,33 @@ public class SellerCreateTripActivity extends AppCompatActivity {
     @Bind(R.id.activity_seller_create_trip_et_destination)
     EditText et_destination;
 
-    @OnFocusChange(R.id.activity_seller_create_trip_et_destination)
-    public void onFocusChange(boolean hasFocus) {
+    @Bind(R.id.activity_seller_create_trip_et_from_date)
+    EditText editTextFromDate;
+
+    @Bind(R.id.activity_seller_create_trip_et_to_date)
+    EditText editTextToDate;
+
+    @OnFocusChange(R.id.activity_seller_create_trip_et_from_date)
+    public void onFocusChangeFrom(boolean hasFocus) {
         DialogFragment dialogFragment =
                 new DatePickerFragment() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                         super.onDateSet(view, year, monthOfYear, dayOfMonth);
-                        et_destination.setText(String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear) + "-" + String.valueOf(year));
+                        editTextFromDate.setText(String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear) + "-" + String.valueOf(year));
+                    }
+                };
+        dialogFragment.show(getSupportFragmentManager(), "datepicker");
+    }
+
+    @OnFocusChange(R.id.activity_seller_create_trip_et_to_date)
+    public void onFocusChangeTo(boolean hasFocus) {
+        DialogFragment dialogFragment =
+                new DatePickerFragment() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                        super.onDateSet(view, year, monthOfYear, dayOfMonth);
+                        editTextToDate.setText(String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear) + "-" + String.valueOf(year));
                     }
                 };
         dialogFragment.show(getSupportFragmentManager(), "datepicker");

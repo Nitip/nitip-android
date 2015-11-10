@@ -26,8 +26,10 @@ public class ItemViewHolder extends EfficientViewHolder<ItemModel> {
     protected void updateView(final Context context, ItemModel object) {
         TextView tvName = findViewByIdEfficient(R.id.row_featured_item_tv_name);
         TextView tvPrice = findViewByIdEfficient(R.id.row_featured_item_tv_price);
+        TextView tvLocation = findViewByIdEfficient(R.id.row_featured_item_tv_location);
         AppCompatButton btnView = findViewByIdEfficient(R.id.row_featured_item_btn_view);
         tvName.setText(object.getName());
+        tvLocation.setText(object.getLocation());
         DecimalFormat df = new DecimalFormat("#.###");
         String price = df.format(object.getPrice());
         tvPrice.setText("Rp. " + price);

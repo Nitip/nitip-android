@@ -10,19 +10,31 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".activities.MainActivity" >
         </activity>
-        <activity android:name=".activities.buyer.BuyerMainActivity" >
+        <activity
+            android:name=".activities.buyer.BuyerMainActivity"
+            android:label="Buy Stuff">
         </activity>
         <activity android:name=".activities.buyer.BuyerDetailItemActivity" >
         </activity>
-        <activity android:name=".activities.buyer.BuyerListTripActivity" >
+        <activity
+            android:name=".activities.buyer.BuyerListTripActivity"
+            android:label="Available Trip">
         </activity>
-        <activity android:name=".activities.buyer.BuyerRequestItemActivity" >
+        <activity
+            android:name=".activities.buyer.BuyerRequestItemActivity"
+            android:label="Request Item">
         </activity>
-        <activity android:name=".activities.seller.SellerMainActivity" >
+        <activity
+            android:name=".activities.seller.SellerMainActivity"
+            android:label="My Trip List">
         </activity>
-        <activity android:name=".activities.seller.SellerCreateTripActivity" >
+        <activity
+            android:name=".activities.seller.SellerCreateTripActivity"
+            android:label="Create New Trip">
         </activity>
-        <activity android:name=".activities.seller.SellerRequestItemActivity" >
+        <activity
+            android:name=".activities.seller.SellerRequestItemActivity"
+            android:label="Items Request">
         </activity>
         <activity android:name=".activities.LoginActivity">
             <intent-filter>

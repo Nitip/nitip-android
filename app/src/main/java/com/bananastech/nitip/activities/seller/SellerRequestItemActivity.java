@@ -6,6 +6,7 @@ import com.bananastech.nitip.fragments.buyer.BuyerFeaturedFragment;
 import com.bananastech.nitip.fragments.buyer.BuyerProgressFragment;
 import com.bananastech.nitip.fragments.seller.SellerCompletedFragment;
 import com.bananastech.nitip.fragments.seller.SellerProgressFragment;
+import com.bananastech.nitip.fragments.seller.SellerRequestFragment;
 import com.blunderer.materialdesignlibrary.activities.ViewPagerWithTabsActivity;
 import com.blunderer.materialdesignlibrary.handlers.ActionBarHandler;
 import com.blunderer.materialdesignlibrary.handlers.ViewPagerHandler;
@@ -32,6 +33,7 @@ public class SellerRequestItemActivity extends ViewPagerWithTabsActivity {
     @Override
     public ViewPagerHandler getViewPagerHandler() {
         return new ViewPagerHandler(this)
+                .addPage("Request", new SellerRequestFragment())
                 .addPage(R.string.section_on_progress, new SellerProgressFragment())
                 .addPage(R.string.section_completed, new SellerCompletedFragment());
     }
