@@ -36,6 +36,10 @@
             android:name=".activities.seller.SellerRequestItemActivity"
             android:label="Items Request">
         </activity>
+        <activity
+            android:name=".activities.seller.SellerDetailRequestActivity"
+            android:label="Detail Request">
+        </activity>
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

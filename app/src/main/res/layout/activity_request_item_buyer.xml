@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/drawable_activity_main_background">
+
+    <include
+        android:id="@+id/activity_request_item_buyer_toolbar"
+        layout="@layout/toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,6 +92,17 @@
                 android:textColorHint="@color/textColorPrimary"/>
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/activity_request_item_buyer_btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:text="SUBMIT"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/textColorPrimary" />
+
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
