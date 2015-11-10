@@ -2,55 +2,36 @@ package com.bananastech.nitip.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.bananastech.nitip.R;
-import com.bananastech.nitip.fragments.HomeFragment;
-import com.bananastech.nitip.fragments.SearchFragment;
-import com.bananastech.nitip.fragments.SellFragment;
-import com.bananastech.nitip.fragments.TripFragment;
-import com.blunderer.materialdesignlibrary.activities.ViewPagerWithTabsActivity;
-import com.blunderer.materialdesignlibrary.handlers.ActionBarHandler;
-import com.blunderer.materialdesignlibrary.handlers.ActionBarSearchHandler;
-import com.blunderer.materialdesignlibrary.handlers.ViewPagerHandler;
-import com.blunderer.materialdesignlibrary.listeners.OnSearchListener;
+import com.bananastech.nitip.activities.buyer.BuyerMainActivity;
+import com.bananastech.nitip.activities.seller.SellerMainActivity;
 
-public class MainActivity extends ViewPagerWithTabsActivity {
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * Created by Haydar Ali Ismail on 10-Nov-15.
+ */
+public class MainActivity extends AppCompatActivity {
+
+    @OnClick(R.id.activity_main_btn_buyer)
+    public void asBuyer() {
+        Intent intent = new Intent(this, BuyerMainActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.activity_main_btn_seller)
+    public void asSeller() {
+        Intent intent = new Intent(this, SellerMainActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    protected boolean expandTabs() {
-        return true;
-    }
-
-    @Override
-    protected boolean enableActionBarShadow() {
-        return false;
-    }
-
-    @Override
-    protected ActionBarHandler getActionBarHandler() {
-        return new ActionBarSearchHandler(this, new OnSearchListener() {
-            @Override
-            public void onSearched(String text) {
-
-            }
-        });
-    }
-
-    @Override
-    public ViewPagerHandler getViewPagerHandler() {
-        return new ViewPagerHandler(this)
-                .addPage(R.string.section_home, new HomeFragment())
-                .addPage(R.string.section_trip, new TripFragment())
-                .addPage(R.string.section_sell, new SellFragment());
-    }
-
-    @Override
-    public int defaultViewPagerPageSelectedPosition() {
-        return 0;
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 }

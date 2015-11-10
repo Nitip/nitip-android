@@ -9,5 +9,8 @@
     <string name="section_trip">Trip</string>
     <string name="section_sell">Be a Seller</string>
     <string name="section_search">Search</string>
+    <string name="section_request">Request</string>
+    <string name="section_on_progress">On Progress</string>
+    <string name="section_completed">Completed</string>
     <string name="text_register">Belum punya akun? Register</string>
 </resources>

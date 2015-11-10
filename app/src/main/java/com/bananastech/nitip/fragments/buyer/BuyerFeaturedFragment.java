@@ -1,5 +1,6 @@
-package com.bananastech.nitip.fragments;
+package com.bananastech.nitip.fragments.buyer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bananastech.nitip.R;
+import com.bananastech.nitip.activities.buyer.BuyerListTripActivity;
 import com.bananastech.nitip.holders.ItemViewHolder;
 import com.bananastech.nitip.models.ItemModel;
 import com.skocken.efficientadapter.lib.adapter.EfficientRecyclerAdapter;
@@ -18,17 +20,23 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Haydar Ali Ismail on 09-Nov-15.
  */
-public class HomeFragment extends Fragment {
-    @Bind(R.id.fragment_home_rv_featured_items)
+public class BuyerFeaturedFragment extends Fragment {
+    @Bind(R.id.fragment_featured_buyer_rv_featured_items)
     RecyclerView recyclerViewFeaturedItems;
+    @OnClick(R.id.fragment_featured_buyer_fab_add)
+    public void addRequest() {
+        Intent intent = new Intent(getContext(), BuyerListTripActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_featured_buyer, container, false);
         ButterKnife.bind(this, view);
         List<ItemModel> itemModelList = new ArrayList<ItemModel>();
         itemModelList.add(new ItemModel("test", 2000));

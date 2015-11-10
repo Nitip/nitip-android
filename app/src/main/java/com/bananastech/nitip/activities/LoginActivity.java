@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bananastech.nitip.R;
+import com.bananastech.nitip.activities.buyer.BuyerMainActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

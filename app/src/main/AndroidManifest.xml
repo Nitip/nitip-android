@@ -10,6 +10,18 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".activities.MainActivity" >
         </activity>
+        <activity android:name=".activities.buyer.BuyerMainActivity" >
+        </activity>
+        <activity android:name=".activities.buyer.BuyerListTripActivity" >
+        </activity>
+        <activity android:name=".activities.buyer.BuyerRequestItemActivity" >
+        </activity>
+        <activity android:name=".activities.seller.SellerMainActivity" >
+        </activity>
+        <activity android:name=".activities.seller.SellerCreateTripActivity" >
+        </activity>
+        <activity android:name=".activities.seller.SellerRequestItemActivity" >
+        </activity>
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
