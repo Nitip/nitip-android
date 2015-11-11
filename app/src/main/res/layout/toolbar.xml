@@ -5,6 +5,5 @@
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     android:minHeight="?attr/actionBarSize"
-    android:titleTextColor="@color/colorAccent"
     local:popupTheme="@style/AppTheme"
     local:theme="@style/AppTheme" />

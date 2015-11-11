@@ -2,12 +2,15 @@ package com.bananastech.nitip.activities.seller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bananastech.nitip.R;
 import com.bananastech.nitip.fragments.picker.DatePickerFragment;
@@ -26,6 +29,9 @@ import cz.msebera.android.httpclient.Header;
  */
 public class SellerCreateTripActivity extends AppCompatActivity {
 
+    @Bind(R.id.activity_seller_create_topic_toolbar)
+    Toolbar toolbar;
+
     @Bind(R.id.activity_seller_create_trip_et_origin)
     EditText et_origin;
 
@@ -37,6 +43,17 @@ public class SellerCreateTripActivity extends AppCompatActivity {
 
     @Bind(R.id.activity_seller_create_trip_et_to_date)
     EditText editTextToDate;
+
+    @OnClick(R.id.activity_seller_create_trip_btn_submit)
+    public void Submit() {
+        Toast.makeText(SellerCreateTripActivity.this, "Thank your for your share of information. Hopefully you can help other people :)", Toast.LENGTH_LONG).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        }, 2000);
+    }
 
     @OnFocusChange(R.id.activity_seller_create_trip_et_from_date)
     public void onFocusChangeFrom(boolean hasFocus) {
@@ -80,5 +97,6 @@ public class SellerCreateTripActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_create_trip);
         ButterKnife.bind(this);
+        toolbar.setTitle("Create a Trip Plan");
     }
 }

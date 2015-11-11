@@ -5,15 +5,17 @@ package com.bananastech.nitip.models;
  */
 public class ItemModel {
 
-    public ItemModel(String name, double price, String location) {
-        this.name = name;
-        this.price = price;
-        this.location = location;
-    }
-
     private String name;
     private double price;
     private String location;
+    private int picture;
+
+    public ItemModel(String name, double price, String location, int picture) {
+        this.name = name;
+        this.price = price;
+        this.location = location;
+        this.picture = picture;
+    }
 
     public String getName() {
         return name;
@@ -37,5 +39,13 @@ public class ItemModel {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public int getPicture() {
+        return picture;
+    }
+
+    public void setPicture(int picture) {
+        this.picture = picture;
     }
 }
