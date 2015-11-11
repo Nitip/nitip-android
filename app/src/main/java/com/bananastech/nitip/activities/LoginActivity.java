@@ -1,7 +1,9 @@
 package com.bananastech.nitip.activities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bananastech.nitip.R;
@@ -17,8 +19,16 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.activity_login_btn_login)
     public void login() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        }, 2000);
     }
 
     @OnClick(R.id.activity_login_tv_register)

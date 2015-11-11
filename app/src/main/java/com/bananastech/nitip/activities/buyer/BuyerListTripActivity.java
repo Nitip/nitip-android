@@ -38,6 +38,9 @@ public class BuyerListTripActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         List<TripModel> tripModelList = new ArrayList<TripModel>();
         tripModelList.add(new TripModel("lucguqol", "Bandung", "San Fransisco", 1447430443, 1447603243));
+        tripModelList.add(new TripModel("mardhani", "Yogyakarta", "Vienna", 1447430443, 1447603243));
+        tripModelList.add(new TripModel("haydarai", "Semarang", "Singapore", 1447430443, 1447603243));
+        tripModelList.add(new TripModel("mrluthfianto", "Surabaya", "Bangkok", 1447430443, 1447603243));
         EfficientRecyclerAdapter<TripModel> adapter = new EfficientRecyclerAdapter<TripModel>(R.layout.row_trip, TripViewHolder.class, tripModelList);
         recyclerViewTrips.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewTrips.setAdapter(adapter);

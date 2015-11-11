@@ -14,7 +14,8 @@
         <TextView
             android:id="@+id/row_trip_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorThird"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,20 +27,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/textColorThird"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text=" - "/>
+                android:text=" - "
+                android:textColor="@color/textColorThird"/>
 
             <TextView
                 android:id="@+id/row_trip_location_to"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/textColorThird"/>
 
         </LinearLayout>
 
@@ -51,17 +55,20 @@
             <TextView
                 android:id="@+id/row_trip_from_date"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorThird"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" - "/>
+                android:text=" - "
+                android:textColor="@color/textColorThird"/>
 
             <TextView
                 android:id="@+id/row_trip_to_date"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorThird"/>
 
         </LinearLayout>
 

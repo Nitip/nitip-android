@@ -39,7 +39,12 @@ public class BuyerFeaturedFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_featured_buyer, container, false);
         ButterKnife.bind(this, view);
         List<ItemModel> itemModelList = new ArrayList<ItemModel>();
-        itemModelList.add(new ItemModel("Miniatur Eiffel", 200000, "Paris"));
+        itemModelList.add(new ItemModel("Miniatur Eiffel", 200000, "Paris", R.drawable.item_1));
+        itemModelList.add(new ItemModel("Action Figure Superman", 150000, "Johannesburg", R.drawable.item_2));
+        itemModelList.add(new ItemModel("Miniatur Colloseum", 175000, "Roma", R.drawable.item_3));
+        itemModelList.add(new ItemModel("Action Figure Batman", 150000, "New York", R.drawable.item_4));
+        itemModelList.add(new ItemModel("Spanish Guitar", 500000, "Barcelona", R.drawable.item_5));
+        itemModelList.add(new ItemModel("Modem 4G", 350000, "New York", R.drawable.item_6));
         EfficientRecyclerAdapter<ItemModel> adapter = new EfficientRecyclerAdapter<ItemModel>(R.layout.row_featured_item, ItemViewHolder.class, itemModelList);
         recyclerViewFeaturedItems.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewFeaturedItems.setAdapter(adapter);

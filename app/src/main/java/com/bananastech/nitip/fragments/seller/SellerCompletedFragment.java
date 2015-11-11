@@ -33,7 +33,7 @@ public class SellerCompletedFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_completed_seller, container, false);
         ButterKnife.bind(this, view);
         List<RequestModel> requestModelList = new ArrayList<RequestModel>();
-        requestModelList.add(new RequestModel("Action Figure Superman", "Action Figure Superman yang memiliki tinggi 5cm.", 100000, 200000, 1));
+        requestModelList.add(new RequestModel("Action Figure Batman", "Action Figure Batman yang memiliki tinggi 5cm.", 90000, 150000, 1));
         EfficientRecyclerAdapter<RequestModel> adapter = new EfficientRecyclerAdapter<RequestModel>(R.layout.row_request, RequestViewHolder.class, requestModelList);
         recyclerViewCompleted.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewCompleted.setAdapter(adapter);

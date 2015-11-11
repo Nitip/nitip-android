@@ -16,7 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/textColorThird"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -28,27 +29,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/textColorThird"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text=" - "/>
+                android:text=" - "
+                android:textColor="@color/textColorThird"/>
 
             <TextView
                 android:id="@+id/row_request_high_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/textColorThird"/>
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/row_request_quantity"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorThird"/>
 
     </LinearLayout>
 
