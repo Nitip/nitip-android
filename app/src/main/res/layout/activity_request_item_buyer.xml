@@ -67,22 +67,6 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/activity_request_item_buyer_et_low_expectation_price"
-                android:hint="Price (Lowest Expectation per Item)"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textColor="@color/textColorPrimary"
-                android:textColorHint="@color/textColorPrimary"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-            <EditText
                 android:id="@+id/activity_request_item_buyer_et_high_expectation_price"
                 android:hint="Price (Highest Expectation per Item)"
                 android:layout_width="match_parent"

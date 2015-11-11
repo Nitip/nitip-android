@@ -33,7 +33,7 @@ public class SellerProgressFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_progress_seller, container, false);
         ButterKnife.bind(this, view);
         List<RequestModel> requestModelList = new ArrayList<RequestModel>();
-        requestModelList.add(new RequestModel("Miniatur Piramid", "Miniatur Pirmaid ini adalah miniatur piramid abad 13.", 90000, 150000, 1));
+        requestModelList.add(new RequestModel("Miniatur Piramid", "Miniatur Pirmaid ini adalah miniatur piramid abad 13.", 150000, 1));
         EfficientRecyclerAdapter<RequestModel> adapter = new EfficientRecyclerAdapter<RequestModel>(R.layout.row_request, RequestViewHolder.class, requestModelList);
         recyclerViewProgress.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewProgress.setAdapter(adapter);

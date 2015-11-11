@@ -6,15 +6,13 @@ package com.bananastech.nitip.models;
 public class RequestModel {
     private String name;
     private String description;
-    private double lowPrice;
     private double highPrice;
     private int quantity;
 
-    public RequestModel(String name, String description, double lowPrice, double highPrice, int quantity) {
+    public RequestModel(String name, String description, double highPrice, int quantity) {
         this.quantity = quantity;
         this.name = name;
         this.description = description;
-        this.lowPrice = lowPrice;
         this.highPrice = highPrice;
     }
 
@@ -32,14 +30,6 @@ public class RequestModel {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public double getLowPrice() {
-        return lowPrice;
-    }
-
-    public void setLowPrice(double lowPrice) {
-        this.lowPrice = lowPrice;
     }
 
     public double getHighPrice() {

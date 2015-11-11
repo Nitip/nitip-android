@@ -25,21 +25,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/row_request_low_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/textColorThird"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text=" - "
-                android:textColor="@color/textColorThird"/>
-
-            <TextView
                 android:id="@+id/row_request_high_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
